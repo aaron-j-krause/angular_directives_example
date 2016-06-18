@@ -1,0 +1,8 @@
+<ul class="photo-album">
+  <h2>{{title}}</h2>
+  <li ng-repeat="photo in photos">
+    <full-size-widget ng-if="mode === 'full'" url="photo.url"></full-size-widget>
+    <thumbnail-widget ng-if="mode === 'thumb'"url="photo.url"></thumbnail-widget>
+    <text-widget ng-if="mode === 'text'"title="photo.title"></text-widget>
+  </li>
+</ul>

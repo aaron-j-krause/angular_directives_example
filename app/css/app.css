@@ -1,0 +1,22 @@
+.photo-album {
+  list-style: none;
+  float: left;
+}
+
+.full-size-widget {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #3ff;
+}
+
+.full-size-widget img {
+  width: 100%;
+}
+
+.thumbnail-widget {
+  width: 50px;
+}
+
+.thumbnail-widget img {
+  width: 100%;
+}

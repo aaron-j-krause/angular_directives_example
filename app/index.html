@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RESOURCE</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body data-ng-app="PhotosApp">
+
+  <main data-ng-controller="PhotosController as photosctrl"
+    ng-cloak>
+      <!-- directives are not self closing -->
+      <full-size-widget url="photosctrl.photo.url"></full-size-widget>
+      <thumbnail-widget url="photosctrl.photo.url"></thumbnail-widget>
+      <text-widget title="photosctrl.photo.title"></text-widget>
+
+      <form>
+          <label> Full Size
+            <input type="radio" name="mode" ng-model="photoctrl.mode" value="full"/>
+          </label>
+          <label>Thumbnail
+            <input type="radio" name="mode" ng-model="photoctrl.mode" value="thumb"/>
+          </label>
+          <label> Text Only
+            <input type="radio" name="mode" ng-model="photoctrl.mode" value="text"/>
+          </label>
+      </form>
+<!-- WIP -->
+<!--       <display-switch></display-switch> -->
+
+      <photo-album photos="photosctrl.slothPhotos" mode="photoctrl.mode" title="Slothss"></photo-album>
+      <photo-album photos="photosctrl.hyraxPhotos" mode="photoctrl.mode" title="Hyrax"></photo-album>
+  </main>
+  <script src="bundle.js"></script>
+</body>
+
+</html>

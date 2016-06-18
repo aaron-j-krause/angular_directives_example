@@ -1,0 +1,12 @@
+<form>
+    {{mode}}
+    <label> Full Size
+      <input type="radio" name="mode" ng-model="mode" value="full" ng-change="switchmode()"/>
+    </label>
+    <label>Thumbnail
+      <input type="radio" name="mode" ng-model="mode" value="thumb" ng-change="switchmode()"/>
+    </label>
+    <label> Text Only
+      <input type="radio" name="mode" ng-model="mode" value="text" ng-change="switchmode()"/>
+    </label>
+</form>
